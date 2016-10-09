@@ -1,0 +1,8 @@
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\obj\Debug\WebServerControl.csprojResolveAssemblyReference.cache
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\bin\WebServerControl.dll.config
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\bin\WebServerControl.dll
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\bin\WebServerControl.pdb
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\bin\MyWeekDayServerControl.dll
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\bin\MyWeekDayServerControl.pdb
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\obj\Debug\WebServerControl.dll
+D:\Vadim\ASP.NET\WebServerControl\WebServerControl\obj\Debug\WebServerControl.pdb

@@ -1,0 +1,5 @@
+D:\Vadim\ASP.NET\WebServerControl\MyWeekDayServerControl\bin\Debug\MyWeekDayServerControl.dll
+D:\Vadim\ASP.NET\WebServerControl\MyWeekDayServerControl\bin\Debug\MyWeekDayServerControl.pdb
+D:\Vadim\ASP.NET\WebServerControl\MyWeekDayServerControl\obj\Debug\MyWeekDayServerControl.csprojResolveAssemblyReference.cache
+D:\Vadim\ASP.NET\WebServerControl\MyWeekDayServerControl\obj\Debug\MyWeekDayServerControl.dll
+D:\Vadim\ASP.NET\WebServerControl\MyWeekDayServerControl\obj\Debug\MyWeekDayServerControl.pdb

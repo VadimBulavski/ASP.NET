@@ -79,10 +79,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Days\Days.csproj">
-      <Project>{3ed7c9e3-9f56-44a0-bb9c-bb1347c4fb9f}</Project>
-      <Name>Days</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyWeekDayServerControl\MyWeekDayServerControl.csproj">
       <Project>{e70895bb-4646-4086-b1b9-67a504935302}</Project>
       <Name>MyWeekDayServerControl</Name>

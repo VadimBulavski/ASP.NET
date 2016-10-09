@@ -1,4 +1,4 @@
-﻿using Days;
+﻿using MyWeekDayServerControl;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -27,9 +27,16 @@ namespace WebServerControl
             {
                 foreach (string day in days)
                 {
-                    this.ServerControl.Text += day;
-                    //ListItem item = new ListItem(ServerControl.Text);
-                    //this.ListBox1.Items.Add(item);
+                    ServerControl1 sc = new ServerControl1();
+                    if (day == DateTime.Now.DayOfWeek.ToString())
+                    {
+                        sc.ForeColor = Color.Red;
+                        sc.Font.Underline = true;
+                    }
+                    sc.Text = day + "<br /><br />";
+                    sc.Font.Size = 16;
+                    sc.Font.Bold = true;
+                    UserContent.Controls.Add(sc);
                 }
             }
         } 

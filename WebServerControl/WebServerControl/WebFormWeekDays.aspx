@@ -9,9 +9,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="user">
-            <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-            <ccs:ServerControl1 ID="ServerControl" Text="" runat="server" />
+        <div id="UserContent" runat="server">
+          
         </div>
     </form>
 </body>

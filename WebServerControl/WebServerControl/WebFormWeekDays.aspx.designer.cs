@@ -22,21 +22,12 @@ namespace WebServerControl {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ListBox1 элемент управления.
+        /// UserContent элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox1;
-        
-        /// <summary>
-        /// ServerControl элемент управления.
-        /// </summary>
-        /// <remarks>
-        /// Автоматически создаваемое поле.
-        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
-        /// </remarks>
-        protected global::MyWeekDayServerControl.ServerControl1 ServerControl;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserContent;
     }
 }
