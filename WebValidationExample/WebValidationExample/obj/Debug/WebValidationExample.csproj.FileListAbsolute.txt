@@ -1,0 +1,6 @@
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\bin\WebValidationExample.dll.config
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\bin\WebValidationExample.dll
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\bin\WebValidationExample.pdb
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\obj\Debug\WebValidationExample.csprojResolveAssemblyReference.cache
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\obj\Debug\WebValidationExample.dll
+D:\Vadim\ASP.NET\WebValidationExample\WebValidationExample\obj\Debug\WebValidationExample.pdb

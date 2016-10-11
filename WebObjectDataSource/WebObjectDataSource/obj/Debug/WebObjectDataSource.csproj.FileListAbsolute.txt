@@ -1,0 +1,6 @@
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll.config
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.pdb
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.csprojResolveAssemblyReference.cache
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.dll
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.pdb
