@@ -4,3 +4,9 @@ D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource
 D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.csprojResolveAssemblyReference.cache
 D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.dll
 D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.pdb
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.csprojResolveAssemblyReference.cache
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.dll
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectDataSource.pdb
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll.config
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll
+E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.pdb

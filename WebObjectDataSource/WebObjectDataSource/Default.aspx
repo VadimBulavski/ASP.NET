@@ -24,8 +24,10 @@
 
             <asp:ListBox ID="ListBox1" DataSourceID="CityDataSource" DataMember="NameCity" runat="server"/>
 
-            <%--<asp:TreeView ID="CityTreeView"
-                DataSourceID="CityDataSource"
+            <asp:XmlDataSource ID="XmlCityDataSource" runat="server" DataFile="citys.xml"></asp:XmlDataSource>
+
+            <asp:TreeView ID="CityTreeView"
+                DataSourceID="XmlCityDataSource"
                 runat="server">
 
                 <DataBindings>
@@ -34,7 +36,7 @@
                     <asp:TreeNodeBinding DataMember="Population" TextField="#innerText" />
                 </DataBindings>
 
-            </asp:TreeView>--%>
+            </asp:TreeView>
         </div>
 
     </form>
