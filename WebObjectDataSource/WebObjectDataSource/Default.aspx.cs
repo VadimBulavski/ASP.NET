@@ -13,11 +13,20 @@ namespace WebObjectDataSource
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (!IsPostBack)
+            //{
+            //    App_Code.ObjectCityRepository abcr = new App_Code.ObjectCityRepository();
+            //    ListBox1.DataSource = abcr.GetCityCollection();
+            //    ListBox1.DataTextField = "NameCity";
+            //    ListBox1.DataBind();
+            //}
 
         }
         protected void Page_Init(object sender, EventArgs e)
         {
             
+            App_Code.XMLObjectCityRepository xmlCreator = new App_Code.XMLObjectCityRepository();
+            xmlCreator.CreateXMLDocument(Server.MapPath("/"));
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Citys>
+  <City name="Minsk">
+    <area>348.84</area>
+    <population>1959781</population>
+  </City>
+  <City name="Brest">
+    <area>117</area>
+    <population>340141</population>
+  </City>
+  <City name="Mogilev">
+    <area>118.5</area>
+    <population>378007</population>
+  </City>
+  <City name="Gomel">
+    <area>135.34</area>
+    <population>521452</population>
+  </City>
+  <City name="Vitebsk">
+    <area>124.54</area>
+    <population>376226</population>
+  </City>
+  <City name="Grodno">
+    <area>142.11</area>
+    <population>365610</population>
+  </City>
+</Citys>

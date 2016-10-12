@@ -1,0 +1,6 @@
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\bin\ASPTask1.dll.config
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\bin\ASPTask1.dll
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\bin\ASPTask1.pdb
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\obj\Debug\ASPTask1.csprojResolveAssemblyReference.cache
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\obj\Debug\ASPTask1.dll
+E:\vadimCod\ASP.NET\ASPTask1\ASPTask1\obj\Debug\ASPTask1.pdb

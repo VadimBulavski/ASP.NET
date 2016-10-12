@@ -10,3 +10,4 @@ E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\obj\Debug\WebObjectD
 E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll.config
 E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.dll
 E:\vadimCod\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\WebObjectDataSource.pdb
+D:\Vadim\ASP.NET\WebObjectDataSource\WebObjectDataSource\bin\Newtonsoft.Json.dll

@@ -13,19 +13,18 @@ namespace WebObjectDataSource.App_Code
          
         public IEnumerable<City> GetCityCollection()
         {
-            XDocument xdoc = new XDocument();
             return obcr.GetCityCollection().ToList();    
         }
 
-        public void CreateXMLDocument()
+        public void CreateXMLDocument(string path)
         {
             List<City> citys = this.GetCityCollection().ToList();
             XDocument xdoc = new XDocument();
-            XElement xCitys = new XElement("citys");
+            XElement xCitys = new XElement("Citys");
 
             foreach (City city in citys)
             {
-                XElement cityElem = new XElement("city");
+                XElement cityElem = new XElement("City");
                 XAttribute elemName = new XAttribute("name", city.NameCity);
                 XElement areaElem = new XElement("area", city.Area);
                 XElement populationElem = new XElement("population", city.Population);
@@ -36,9 +35,7 @@ namespace WebObjectDataSource.App_Code
             }
 
             xdoc.Add(xCitys);
-            xdoc.Save("citys.xml");
-        }
-       
-        
+            xdoc.Save(path + "/citys.xml");
+        }      
     }
 }

@@ -1,0 +1,12 @@
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.dll.config
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.dll
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.pdb
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.csprojResolveAssemblyReference.cache
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.dll
+E:\vadimCod\ASP.NET\WebTask2ImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.pdb
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.dll.config
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.dll
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\bin\WebTask2ImgManager.pdb
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.csprojResolveAssemblyReference.cache
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.dll
+D:\Vadim\ASP.NET\WebImgManager\WebTask2ImgManager\obj\Debug\WebTask2ImgManager.pdb
