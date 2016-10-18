@@ -5,10 +5,11 @@ using System.Text;
 
 namespace WebTestUser
 {
-    enum QuestionTypes { Check, Radio }
+    public enum QuestionTypes { Check, Radio }
 
     public class Question
     {
+        
         public string QuestionText { get; set; }
         public QuestionTypes Type { get; set; }
         public List<Answer> Answers { get; set; }

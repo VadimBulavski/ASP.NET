@@ -12,6 +12,7 @@ namespace WebTestUser
             Test firsTest = new Test("First Test", new TimeSpan(0, 15, 0));
             Question question1 = new Question(QuestionTypes.Check, new List<string>() { "answer1", "answer3" })
             {
+                QuestionText = "Question 1",
                 Answers = new List<Answer>()
                 {
                   new Answer("answer1"),
@@ -24,6 +25,7 @@ namespace WebTestUser
 
             Question question2 = new Question(QuestionTypes.Check, new List<string>() { "answer2", "answer4" })
             {
+                QuestionText = "Question 2",
                 Answers = new List<Answer>()
                 {
                   new Answer("answer1"),
@@ -36,6 +38,7 @@ namespace WebTestUser
 
             Question question3 = new Question(QuestionTypes.Radio, "answer2")
             {
+                QuestionText = "Question 3",
                 Answers = new List<Answer>()
                 {
                   new Answer("answer1"),
@@ -48,6 +51,7 @@ namespace WebTestUser
 
             Question question4 = new Question(QuestionTypes.Radio, "answer4")
             {
+                QuestionText = "Question 4",
                 Answers = new List<Answer>()
                 {
                   new Answer("answer1"),
@@ -60,6 +64,7 @@ namespace WebTestUser
 
             Question question5 = new Question(QuestionTypes.Check, new List<string>() { "answer1", "answer5" })
             {
+                QuestionText = "Question 5",
                 Answers = new List<Answer>()
                 {
                   new Answer("answer1"),

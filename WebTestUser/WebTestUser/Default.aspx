@@ -10,10 +10,12 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
         <asp:UpdatePanel ID="UpdatePanel" runat="server">
             <ContentTemplate>
                 <mycontrol:TestBodyControl ID="TestBodyControl"  runat="server"/>
-                <asp:Button ID="ButtNext" runat="server" Text="Next-->" />
+                <asp:Button ID="ButtNext" runat="server" Text="Next-->" OnClick="ButtNext_Click" />
                 <asp:Button ID="ButtCancel" runat="server" Text="Cancel" />
             </ContentTemplate>
         </asp:UpdatePanel>

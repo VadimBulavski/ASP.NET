@@ -14,17 +14,36 @@ namespace WebTestUser
 
         }
 
-        protected void LoadingDataIntoControl(int index)
+        public void LoadingDataIntoControl(int index)
         {
-
+            textAnawer.Controls.Clear();
             ObjectQuestionRepository oqr = new ObjectQuestionRepository();
             Test mytes = oqr.GetQuestionAndAnswerData();
             nameTest.Text = mytes.Name;
-            bodyQuestion.Text = mytes.Questions[index].
-            foreach(Question quest in mytes.Questions)
+            if(index >= 0 || index <= mytes.Questions.Count)
             {
-                
-            }
+                bodyQuestion.Text = mytes.Questions[index].QuestionText;
+                switch (mytes.Questions[index].Type)
+                {
+                    case QuestionTypes.Check:
+                        foreach (Answer answer in mytes.Questions[index].Answers)
+                        {
+                            CheckBox cb = new CheckBox();
+                            cb.Text = answer.BodyAnswer + "<br />";
+                            textAnawer.Controls.Add(cb);
+                        }
+                        break;
+                    case QuestionTypes.Radio:
+                        foreach (Answer answer in mytes.Questions[index].Answers)
+                        {
+                            RadioButton rb = new RadioButton();
+                            rb.Text = answer.BodyAnswer + "<br />";
+                            rb.GroupName = "answer";
+                            textAnawer.Controls.Add(rb);
+                        }
+                        break;
+                }
+            } 
         }
     }
 }
