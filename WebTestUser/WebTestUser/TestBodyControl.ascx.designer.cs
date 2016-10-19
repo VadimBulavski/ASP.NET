@@ -31,12 +31,12 @@ namespace WebTestUser {
         protected global::System.Web.UI.WebControls.Label bodyQuestion;
         
         /// <summary>
-        /// textAnawer control.
+        /// textAnswer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textAnawer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl textAnswer;
     }
 }

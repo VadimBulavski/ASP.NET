@@ -16,7 +16,7 @@ namespace WebTestUser
 
         public void LoadingDataIntoControl(int index)
         {
-            textAnawer.Controls.Clear();
+            textAnswer.Controls.Clear();
             ObjectQuestionRepository oqr = new ObjectQuestionRepository();
             Test mytes = oqr.GetQuestionAndAnswerData();
             nameTest.Text = mytes.Name;
@@ -30,7 +30,7 @@ namespace WebTestUser
                         {
                             CheckBox cb = new CheckBox();
                             cb.Text = answer.BodyAnswer + "<br />";
-                            textAnawer.Controls.Add(cb);
+                            textAnswer.Controls.Add(cb);
                         }
                         break;
                     case QuestionTypes.Radio:
@@ -39,7 +39,7 @@ namespace WebTestUser
                             RadioButton rb = new RadioButton();
                             rb.Text = answer.BodyAnswer + "<br />";
                             rb.GroupName = "answer";
-                            textAnawer.Controls.Add(rb);
+                            textAnswer.Controls.Add(rb);
                         }
                         break;
                 }

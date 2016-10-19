@@ -13,7 +13,7 @@
     </tr>
     <tr>
         <td>
-            <div id ="textAnawer" runat="server" style="font-size: large; font-weight: bold"></div>
+            <div id ="textAnswer" runat="server" style="font-size: large; font-weight: bold"></div>
         </td>
     </tr>
 </table>

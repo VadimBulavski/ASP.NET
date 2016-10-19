@@ -19,6 +19,8 @@
                 <asp:Button ID="ButtCancel" runat="server" Text="Cancel" />
             </ContentTemplate>
         </asp:UpdatePanel>
+        <iframe src="http://tut.by" <%--width="1900" height="800"--%>></iframe>
+        <iframe src="https://vk.com" />
     </div>
     </form>
 </body>
