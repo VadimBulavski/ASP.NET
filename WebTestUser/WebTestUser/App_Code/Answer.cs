@@ -8,10 +8,12 @@ namespace WebTestUser
     public class Answer
     {
         public string BodyAnswer { get; set; }
-        public Answer() { }
+        public bool IsChecked { get; set; }
+        public Answer() { IsChecked = false; }
         public Answer(string textAnswer)
         {
             BodyAnswer = textAnswer;
+            IsChecked = false;
         }
     }
 }

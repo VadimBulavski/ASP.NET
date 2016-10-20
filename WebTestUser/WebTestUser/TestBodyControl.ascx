@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="TestBodyControl.ascx.cs" Inherits="WebTestUser.TestBodyControl" %>
 
-<table style="width:100%; border:0; background-color:lightblue">
-     <tr>
+<table style="width: 100%; border: 0; background-color: lightblue">
+    <tr>
         <td>
-            <asp:label id="nameTest" Font-Size="XX-Large" runat="server" Font-Bold="True"></asp:label>
+            <asp:Label ID="nameTest" Font-Size="XX-Large" runat="server" Font-Bold="True"></asp:Label>
         </td>
     </tr>
     <tr>
@@ -13,7 +13,9 @@
     </tr>
     <tr>
         <td>
-            <div id ="textAnswer" runat="server" style="font-size: large; font-weight: bold"></div>
+            <asp:Panel ID="textAnswer" runat="server" Font-Size="Large" Font-Bold="true"></asp:Panel>
+
+            <%--<div id="textAnswer" runat="server" style="font-size: large; font-weight: bold"></div>--%>
         </td>
     </tr>
 </table>

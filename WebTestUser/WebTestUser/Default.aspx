@@ -11,16 +11,14 @@
     <form id="form1" runat="server">
     <div>
         <asp:ScriptManager ID="ScriptManager1" runat="server" />
-
         <asp:UpdatePanel ID="UpdatePanel" runat="server">
             <ContentTemplate>
                 <mycontrol:TestBodyControl ID="TestBodyControl"  runat="server"/>
+                 <asp:Button ID="ButtPrevious" runat="server" Text="<--Previos" OnClick="ButtPrevious_Click" />
                 <asp:Button ID="ButtNext" runat="server" Text="Next-->" OnClick="ButtNext_Click" />
                 <asp:Button ID="ButtCancel" runat="server" Text="Cancel" />
             </ContentTemplate>
         </asp:UpdatePanel>
-        <iframe src="http://tut.by" <%--width="1900" height="800"--%>></iframe>
-        <iframe src="https://vk.com" />
     </div>
     </form>
 </body>

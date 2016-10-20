@@ -12,18 +12,39 @@ namespace WebTestUser
         public int counter = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            TestBodyControl.LoadingDataIntoControl(counter);
+            if(!IsPostBack)
+            {
+                TestBodyControl.LoadingDataIntoControl(counter);
+            }
+            
         }
 
         protected void ButtNext_Click(object sender, EventArgs e)
         {
-             
+            var control = TestBodyControl.FindControl("textAnswer").Controls;
+
+            //TestBodyControl.GetCheckedControl(counter, control);
             object obj = ViewState["count"];
             if(obj != null)
             {
                 counter = Int32.Parse(ViewState["count"] as string);
             }
             counter++;
+            ViewState["count"] = counter.ToString();
+            
+            TestBodyControl.LoadingDataIntoControl(counter);
+        }
+
+        protected void ButtPrevious_Click(object sender, EventArgs e)
+        {
+            var control = TestBodyControl.FindControl("textAnswer");
+            TestBodyControl.GetCheckedControl(counter, control);
+            object obj = ViewState["count"];
+            if (obj != null)
+            {
+                counter = Int32.Parse(ViewState["count"] as string);
+            }
+            counter--;
             ViewState["count"] = counter.ToString();
             TestBodyControl.LoadingDataIntoControl(counter);
         }

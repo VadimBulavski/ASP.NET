@@ -9,6 +9,8 @@ namespace WebTestUser
 {
     public partial class TestBodyControl : System.Web.UI.UserControl
     {
+        private static ObjectQuestionRepository oqr = new ObjectQuestionRepository();
+        private static Test mytes = oqr.GetQuestionAndAnswerData();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -16,11 +18,33 @@ namespace WebTestUser
 
         public void LoadingDataIntoControl(int index)
         {
+            CreatingFieldForAnswers(index);
+            //if(textAnswer.Controls.Count == 0)
+            //{
+                
+            //}
+            //else
+            //{
+            //    foreach(Control control in textAnswer.Controls){
+            //        if ((control as CheckBox).Checked || (control as RadioButton).Checked)
+            //        {
+            //            Test mytes = GetTest();
+            //            foreach (Answer answer in mytes.Questions[index].Answers)
+            //            {
+            //                answer.IsChecked = true;
+            //            }
+            //        }
+            //    }
+            //    textAnswer.Controls.Clear();
+            //    CreatingFieldForAnswers(index);
+            //}
+        }
+
+        private void CreatingFieldForAnswers(int index)
+        {
             textAnswer.Controls.Clear();
-            ObjectQuestionRepository oqr = new ObjectQuestionRepository();
-            Test mytes = oqr.GetQuestionAndAnswerData();
             nameTest.Text = mytes.Name;
-            if(index >= 0 || index <= mytes.Questions.Count)
+            if (index >= 0 || index <= mytes.Questions.Count)
             {
                 bodyQuestion.Text = mytes.Questions[index].QuestionText;
                 switch (mytes.Questions[index].Type)
@@ -30,6 +54,10 @@ namespace WebTestUser
                         {
                             CheckBox cb = new CheckBox();
                             cb.Text = answer.BodyAnswer + "<br />";
+                            if (answer.IsChecked)
+                            {
+                                cb.Checked = true;
+                            }
                             textAnswer.Controls.Add(cb);
                         }
                         break;
@@ -39,11 +67,32 @@ namespace WebTestUser
                             RadioButton rb = new RadioButton();
                             rb.Text = answer.BodyAnswer + "<br />";
                             rb.GroupName = "answer";
+                            if (answer.IsChecked)
+                            {
+                                rb.Checked = true;
+                            }
                             textAnswer.Controls.Add(rb);
                         }
                         break;
                 }
-            } 
+                //GetCheckedControl(index, textAnswer.Controls, mytes);
+            }
+        }
+
+        public void GetCheckedControl(int index, Control control)
+        {
+            //FindControl("textAnswer").Controls
+            //Test mytes = oqr.GetQuestionAndAnswerData();
+            foreach (Control contr in control.Controls)
+            {
+                if ((contr is CheckBox) && (contr as CheckBox).Checked || (contr is RadioButton)&&(contr as RadioButton).Checked)
+                {
+                    foreach (Answer answer in mytes.Questions[index].Answers)
+                    {
+                        answer.IsChecked = true;
+                    }
+                }
+            }
         }
     }
 }
