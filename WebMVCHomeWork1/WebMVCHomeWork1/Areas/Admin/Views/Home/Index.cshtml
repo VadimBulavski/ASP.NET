@@ -11,10 +11,12 @@
     <title>Index</title>
 </head>
 <body>
+    <h1>Admin</h1>
     <div>
         @Html.ActionLink("Products", "Index", "Products") <br/>
         @Html.ActionLink("Create Products", "Create", "Products") <br />
-        @Html.ActionLink("Delete Products", "Create", "Products") <br />
+        @Html.ActionLink("Delete Products", "Create", "Products") <br /><br />
+        @Html.ActionLink("Home", "Index", new { controller = "Home", area = ""}) 
     </div>
 </body>
 </html>
