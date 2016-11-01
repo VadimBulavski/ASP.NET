@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin</title>
+</head>
+<body>
+    <div> 
+        <h1>Admin News</h1>
+        @Html.ActionLink("Create New", "Create", new {controller = "Admin", area = "Admin"})<br/>
+        @Html.ActionLink("Read New", "Read", new { controller = "Admin", area = "Admin" })<br />
+        @Html.ActionLink("Update New", "Read", new { controller = "Admin", area = "Admin" })<br />
+        @Html.ActionLink("Delete New", "Read", new { controller = "Admin", area = "Admin" })<br />
+        @Html.ActionLink("Go to News", "Index", new { controller = "News", area = "News"})
+    </div>
+</body>
+</html>
