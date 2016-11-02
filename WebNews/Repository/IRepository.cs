@@ -7,8 +7,9 @@ using WebNews.Entitys;
 
 namespace Repository
 {
-    interface IRepository<T>
+    interface IRepository
     {
-        IEnumerable<T> GetAllNews();
+        New GetNew(int id);
+        IEnumerable<New> GetAllNews(Func<New, bool> selector);
     }
 }

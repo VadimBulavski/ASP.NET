@@ -162,10 +162,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\News\Controllers\NewsController.cs" />
     <Compile Include="Areas\News\NewsAreaRegistration.cs" />
-    <Compile Include="Context\NewsContext.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Entitys\Comment.cs" />
-    <Compile Include="Entitys\New.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +231,20 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DomainObject\DomainObject.csproj">
+      <Project>{81cbeeee-1203-4a74-b605-35a5715c4f44}</Project>
+      <Name>DomainObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewsContext\NewsContext.csproj">
+      <Project>{e380da24-f350-41e9-ae97-64b7190c3213}</Project>
+      <Name>NewsContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{f702dc7a-2b50-4494-97b2-40ae4a7453cc}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

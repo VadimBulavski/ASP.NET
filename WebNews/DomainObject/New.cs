@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DomainObject.Entitys;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,6 @@ using System.Web;
 
 namespace WebNews.Entitys
 {
-    enum TypeNews { Standart = 1, Advertising = 2 }
     public class New
     {
         [Key]
