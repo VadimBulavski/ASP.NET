@@ -10,6 +10,6 @@ namespace Repository
     public interface IRepository
     {
         New GetNew(int id);
-        IEnumerable<New> GetAllNews(Func<New, bool> selector);
+        IEnumerable<New> GetAllNews();
     }
 }

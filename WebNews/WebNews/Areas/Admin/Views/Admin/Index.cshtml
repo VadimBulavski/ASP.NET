@@ -1,7 +1,8 @@
-﻿
+﻿@model IEnumerable<DomainObject.Entitys.New>
 @{
     Layout = null;
 }
+
 
 <!DOCTYPE html>
 
@@ -13,11 +14,33 @@
 <body>
     <div> 
         <h1>Admin News</h1>
-        @Html.ActionLink("Create New", "Create", new {controller = "Admin", area = "Admin"})<br/>
-        @Html.ActionLink("Read New", "Read", new { controller = "Admin", area = "Admin" })<br />
-        @Html.ActionLink("Update New", "Read", new { controller = "Admin", area = "Admin" })<br />
-        @Html.ActionLink("Delete New", "Read", new { controller = "Admin", area = "Admin" })<br />
-        @Html.ActionLink("Go to News", "Index", new { controller = "News", area = "News"})
+        @Html.ActionLink("Create New", "Create", new { controller = "Admin", area = "Admin" })
+        @Html.ActionLink("Go to News", "Index", new { controller = "News", area = "News" })
+        @foreach(var item in Model)
+        {
+            <table class="table">
+                <tr>
+                    <td style="font-family:'MT Extra'; font-size:x-large">
+                        @Html.DisplayFor(itemModel => item.Header)
+                    </td>
+                    <td>
+
+                        @* @Html.ActionLink("Read New", "Read", new { controller = "Admin", area = "Admin" })<br />*@
+                        @Html.ActionLink("Update New", "Read", new { controller = "Admin", area = "Admin" }) |
+                        @Html.ActionLink("Delete New", "Read", new { controller = "Admin", area = "Admin" })
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(itemModel => item.Body)
+                    </td>
+                    
+                </tr>
+            </table>
+        }
+
+        
     </div>
 </body>
 </html>

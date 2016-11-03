@@ -17,15 +17,15 @@ namespace WebNews.Areas.Admin.Controllers
         // GET: Admin/Admin
         private IRepository _service = null;
         private NewsDataContext db = new NewsDataContext();
-
-        public AdminController(IRepository service)
+       
+        public AdminController()
         {
-            _service = service;
+            _service = new Repository.Repository();
         }
 
         public ActionResult Index()
         {
-            return View(_service.GetAllNews((x)=>true));
+            return View(_service.GetAllNews());
         }
 
         public ActionResult Read(int? id)
@@ -57,6 +57,7 @@ namespace WebNews.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                nextNew.CreateDate = DateTime.Now;
                 db.News.Add(nextNew);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -94,7 +95,7 @@ namespace WebNews.Areas.Admin.Controllers
             return View(nextNew);
         }
 
-        // GET: /Car/Car/Delete/5
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +110,7 @@ namespace WebNews.Areas.Admin.Controllers
             return View(nextNew);
         }
 
-        // POST: /Car/Car/Delete/5
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

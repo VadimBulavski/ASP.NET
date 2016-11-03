@@ -1,4 +1,5 @@
 ﻿using DomainObject.Entitys;
+using NewsContext.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,10 @@ namespace Repository
             return new New();
         }
 
-        public IEnumerable<DomainObject.Entitys.New> GetAllNews(Func<DomainObject.Entitys.New, bool> selector)
+        public IEnumerable<DomainObject.Entitys.New> GetAllNews()
         {
-            return Enumerable.Empty<New>();
+            NewsDataContext db = new NewsDataContext();
+            return db.News.Select(p => p).ToList();
         }
     }
 }
