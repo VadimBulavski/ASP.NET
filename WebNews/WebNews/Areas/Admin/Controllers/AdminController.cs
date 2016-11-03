@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using DomainObject.Entitys;
+using Repository;
+using NewsContext.Context;
+using System.Net;
+using System.Data.Entity;
 
 
 namespace WebNews.Areas.Admin.Controllers
@@ -11,86 +15,83 @@ namespace WebNews.Areas.Admin.Controllers
     public class AdminController : Controller
     {
         // GET: Admin/Admin
-        private Repository.IRepository _service = null;
-        private 
-        public AdminController(Repository.IRepository service)
+        private IRepository _service = null;
+        private NewsDataContext db = new NewsDataContext();
+
+        public AdminController(IRepository service)
         {
             _service = service;
         }
 
-        // GET: /Car/Car/
         public ActionResult Index()
         {
-            return View(_service.GetAllCars((x)=>true));
+            return View(_service.GetAllNews((x)=>true));
         }
 
-        // GET: /Car/Car/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Read(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Infrastruction.DomainObjects.Car car = db.Cars.Find(id);
-            if (car == null)
+
+            New nextNew = db.News.Find(id);
+
+            if (nextNew == null)
             {
                 return HttpNotFound();
             }
-            return View(car);
+            return View(nextNew);
         }
 
-        // GET: /Car/Car/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: /Car/Car/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CarId,CarName,Status")] Infrastruction.DomainObjects.Car car)
+        public ActionResult Create([Bind(Include = "NewsID, Header, Body, Hot, Type")] New nextNew)
         {
             if (ModelState.IsValid)
             {
-                db.Cars.Add(car);
+                db.News.Add(nextNew);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(car);
+            return View(nextNew);
         }
 
-        // GET: /Car/Car/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Update(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Infrastruction.DomainObjects.Car car = db.Cars.Find(id);
-            if (car == null)
+            New nextNew = db.News.Find(id);
+            if (nextNew == null)
             {
                 return HttpNotFound();
             }
-            return View(car);
+            return View(nextNew);
         }
 
-        // POST: /Car/Car/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CarId,CarName,Status")] Infrastruction.DomainObjects.Car car)
+        public ActionResult Update([Bind(Include = "NewsID, Header, Body, Hot, Type")] New nextNew)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(car).State = EntityState.Modified;
+                db.Entry(nextNew).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(car);
+            return View(nextNew);
         }
 
         // GET: /Car/Car/Delete/5
@@ -100,12 +101,12 @@ namespace WebNews.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Infrastruction.DomainObjects.Car car = db.Cars.Find(id);
-            if (car == null)
+            New nextNew = db.News.Find(id);
+            if (nextNew == null)
             {
                 return HttpNotFound();
             }
-            return View(car);
+            return View(nextNew);
         }
 
         // POST: /Car/Car/Delete/5
@@ -113,8 +114,8 @@ namespace WebNews.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Infrastruction.DomainObjects.Car car = db.Cars.Find(id);
-            db.Cars.Remove(car);
+            New nexNew = db.News.Find(id);
+            db.News.Remove(nexNew);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -126,7 +127,6 @@ namespace WebNews.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
         }
     }
 }

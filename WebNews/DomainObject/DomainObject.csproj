@@ -48,10 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Comment.cs" />
-    <Compile Include="New.cs" />
-    <Compile Include="TypeNews.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Entitys\Comment.cs" />
+    <Compile Include="Entitys\New.cs" />
+    <Compile Include="Entitys\TypeNews.cs" />
+    <Compile Include="Entitys\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

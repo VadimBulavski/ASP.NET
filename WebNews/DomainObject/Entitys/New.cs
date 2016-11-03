@@ -1,11 +1,11 @@
-﻿using DomainObject.Entitys;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace WebNews.Entitys
+namespace DomainObject.Entitys
 {
     public class New
     {
@@ -15,8 +15,7 @@ namespace WebNews.Entitys
         public string Body { get; set; }
         public DateTime CreateDate { get; set; }
         public bool Hot { get; set; }
-        public TypeNews TypeNews { get; set; }
-        
+        public TypeNews Type { get; set; }
 
         public virtual List<Comment> Comments { get; set; }
     }

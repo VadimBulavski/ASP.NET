@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomainObject.Entitys
 {
-    enum TypeNews 
-    { 
-        Standart = 1, 
+    public enum TypeNews
+    {
+        Standart = 1,
         Advertising = 2 
     }
 }

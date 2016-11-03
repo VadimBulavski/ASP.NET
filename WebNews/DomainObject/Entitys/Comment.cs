@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using DomainObject.Entitys;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace WebNews.Entitys
+namespace DomainObject.Entitys
 {
     public class Comment
     {
@@ -15,8 +15,7 @@ namespace WebNews.Entitys
         public DateTime CreateDate { get; set; }
 
 
-        public virtual User UserId{ get; set; }
+        public virtual User User { get; set; }
         public virtual New NewID { get; set; }
-
     }
 }
