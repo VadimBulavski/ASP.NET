@@ -21,7 +21,10 @@ namespace WebTestUser
 
         protected void ButtNext_Click(object sender, EventArgs e)
         {
-            var control = TestBodyControl.FindControl("textAnswer").Controls;
+            foreach ()
+            {
+                
+            }
 
             //TestBodyControl.GetCheckedControl(counter, control);
             object obj = ViewState["count"];

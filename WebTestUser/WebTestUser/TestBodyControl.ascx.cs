@@ -42,7 +42,7 @@ namespace WebTestUser
 
         private void CreatingFieldForAnswers(int index)
         {
-            textAnswer.Controls.Clear();
+            PlaceHolder1.Controls.Clear();
             nameTest.Text = mytes.Name;
             if (index >= 0 || index <= mytes.Questions.Count)
             {
@@ -52,13 +52,15 @@ namespace WebTestUser
                     case QuestionTypes.Check:
                         foreach (Answer answer in mytes.Questions[index].Answers)
                         {
+                           
                             CheckBox cb = new CheckBox();
                             cb.Text = answer.BodyAnswer + "<br />";
+                            
                             if (answer.IsChecked)
                             {
                                 cb.Checked = true;
                             }
-                            textAnswer.Controls.Add(cb);
+                            PlaceHolder1.Controls.Add(cb);
                         }
                         break;
                     case QuestionTypes.Radio:
@@ -71,7 +73,7 @@ namespace WebTestUser
                             {
                                 rb.Checked = true;
                             }
-                            textAnswer.Controls.Add(rb);
+                            PlaceHolder1.Controls.Add(rb);
                         }
                         break;
                 }
