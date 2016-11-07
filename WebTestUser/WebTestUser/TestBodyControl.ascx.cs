@@ -55,7 +55,6 @@ namespace WebTestUser
                            
                             CheckBox cb = new CheckBox();
                             cb.Text = answer.BodyAnswer + "<br />";
-                            
                             if (answer.IsChecked)
                             {
                                 cb.Checked = true;

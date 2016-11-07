@@ -16,25 +16,32 @@ namespace WebTestUser
             if(!IsPostBack)
             {
                 TestBodyControl.LoadingDataIntoControl(counter);
-                
             }
+            ControlCollection collection = Session["control"] as ControlCollection;
+            if(collection != null)
+            {
+                var obj = ViewState["count"];
+                if(obj != null)
+                {
+                    counter = Int32.Parse(obj.ToString());
+                    TestBodyControl.GetCheckedControl(counter, collection);
+                    //TestBodyControl.LoadingDataIntoControl(counter);
+                }
+                else
+                    TestBodyControl.GetCheckedControl(counter, collection);
+            }
+            else
+                Session["control"] = TestBodyControl.FindControl("PlaceHolder1").Controls;
         }
 
       
         protected void ButtNext_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            foreach ()
-            {
-                
-            }
-=======
->>>>>>> 65d467e82d02f2c7d4ea24c88b1c74495b28bf6d
-
           
             //TestBodyControl.GetCheckedControl(counter, ;
             //TestBodyControl.GetCheckedControl(counter, control);
             //TestBodyControl.GetCheckedControl(counter, control);
+            Session["control"] = TestBodyControl.FindControl("PlaceHolder1").Controls;
             object obj = ViewState["count"];
             if (obj != null)
             {
@@ -50,6 +57,7 @@ namespace WebTestUser
         {
             //var control = TestBodyControl.FindControl("textAnswer");
             //TestBodyControl.GetCheckedControl(counter, control);
+            //Session["control"] = TestBodyControl.Controls;
             object obj = ViewState["count"];
             if (obj != null)
             {

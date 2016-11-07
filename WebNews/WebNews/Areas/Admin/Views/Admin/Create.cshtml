@@ -1,6 +1,6 @@
 ﻿@model DomainObject.Entitys.New
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -36,8 +36,8 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    @Html.LabelFor(model => model.Hot, new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
-                        @Html.LabelFor(model => model.Hot, new { @class = "control-label col-md-2" })
                         @Html.EditorFor(model => model.Hot)
                         @Html.ValidationMessageFor(model => model.Hot)
                     </div>

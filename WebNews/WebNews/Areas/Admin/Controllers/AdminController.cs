@@ -108,6 +108,7 @@ namespace WebNews.Areas.Admin.Controllers
                 return HttpNotFound();
             }
             return View(nextNew);
+            //return DeleteConfirmed((int)id);
         }
 
 
