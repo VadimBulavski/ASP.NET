@@ -77,15 +77,13 @@ namespace WebTestUser
                         }
                         break;
                 }
-                //GetCheckedControl(index, textAnswer.Controls, mytes);
             }
         }
 
-        public void GetCheckedControl(int index, Control control)
+
+        public void GetCheckedControl(int index, ControlCollection controls)
         {
-            //FindControl("textAnswer").Controls
-            //Test mytes = oqr.GetQuestionAndAnswerData();
-            foreach (Control contr in control.Controls)
+            foreach (Control contr in controls)
             {
                 if ((contr is CheckBox) && (contr as CheckBox).Checked || (contr is RadioButton)&&(contr as RadioButton).Checked)
                 {

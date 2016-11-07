@@ -1,0 +1,15 @@
+﻿@model WebMVCHomeWork2.Models.Message
+
+@{
+    ViewBag.Title = "Message";
+}
+
+<h2>Message</h2>
+
+@using (Html.BeginForm("Message", "Home", FormMethod.Post))
+{
+    @Html.TextAreaFor(m => m.MessageText)<br/>
+    @Html.TextBox("message")
+    <input type="submit" value="Send" />
+}
+ 

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebNews", "WebNews\WebNews.csproj", "{C043C313-C908-4084-BBCB-5A82E70FFA39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{73CB9EC0-2141-496C-A2B4-C247DEEDC1BC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainObject", "DomainObject\DomainObject.csproj", "{81CBEEEE-1203-4A74-B605-35A5715C4F44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsContext", "NewsContext\NewsContext.csproj", "{E380DA24-F350-41E9-AE97-64B7190C3213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servise", "Servise\Servise.csproj", "{4779C629-F2FD-4C91-9B7A-400EE4B8526F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{F702DC7A-2B50-4494-97B2-40AE4A7453CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C043C313-C908-4084-BBCB-5A82E70FFA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C043C313-C908-4084-BBCB-5A82E70FFA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C043C313-C908-4084-BBCB-5A82E70FFA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C043C313-C908-4084-BBCB-5A82E70FFA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CBEEEE-1203-4A74-B605-35A5715C4F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CBEEEE-1203-4A74-B605-35A5715C4F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CBEEEE-1203-4A74-B605-35A5715C4F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CBEEEE-1203-4A74-B605-35A5715C4F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E380DA24-F350-41E9-AE97-64B7190C3213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E380DA24-F350-41E9-AE97-64B7190C3213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E380DA24-F350-41E9-AE97-64B7190C3213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E380DA24-F350-41E9-AE97-64B7190C3213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4779C629-F2FD-4C91-9B7A-400EE4B8526F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4779C629-F2FD-4C91-9B7A-400EE4B8526F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4779C629-F2FD-4C91-9B7A-400EE4B8526F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4779C629-F2FD-4C91-9B7A-400EE4B8526F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F702DC7A-2B50-4494-97B2-40AE4A7453CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F702DC7A-2B50-4494-97B2-40AE4A7453CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F702DC7A-2B50-4494-97B2-40AE4A7453CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F702DC7A-2B50-4494-97B2-40AE4A7453CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
