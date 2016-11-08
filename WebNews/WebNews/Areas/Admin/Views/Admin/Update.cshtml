@@ -1,4 +1,4 @@
-﻿
+﻿@model DomainObject.Entitys.New
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -14,6 +14,22 @@
     <div> 
         <h1>Update New</h1>
         @Html.ActionLink("Back", "Index", new { controller = "Admin", area = "Admin" })
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(model=>model.Header):
+            </dt>
+            <dd>
+                @Html.EditorFor(model => model.Header)
+                @Html.ValidationMessageFor(model => model.Header)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Body):
+            </dt>
+            <dd>
+                @Html.EditorFor(model => model.Header)
+                @Html.ValidationMessageFor(model => model.Header)
+            </dd>
+        </dl>
     </div>
 </body>
 </html>

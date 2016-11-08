@@ -18,26 +18,7 @@ namespace WebTestUser
 
         public void LoadingDataIntoControl(int index)
         {
-            CreatingFieldForAnswers(index);
-            //if(textAnswer.Controls.Count == 0)
-            //{
-                
-            //}
-            //else
-            //{
-            //    foreach(Control control in textAnswer.Controls){
-            //        if ((control as CheckBox).Checked || (control as RadioButton).Checked)
-            //        {
-            //            Test mytes = GetTest();
-            //            foreach (Answer answer in mytes.Questions[index].Answers)
-            //            {
-            //                answer.IsChecked = true;
-            //            }
-            //        }
-            //    }
-            //    textAnswer.Controls.Clear();
-            //    CreatingFieldForAnswers(index);
-            //}
+            CreatingFieldForAnswers(index); 
         }
 
         private void CreatingFieldForAnswers(int index)
@@ -82,14 +63,11 @@ namespace WebTestUser
 
         public void GetCheckedControl(int index, ControlCollection controls)
         {
-            foreach (Control contr in controls)
+            for (int i = 0; i < controls.Count; ++i)
             {
-                if ((contr is CheckBox) && (contr as CheckBox).Checked || (contr is RadioButton)&&(contr as RadioButton).Checked)
+                if ((controls[i] is CheckBox) && (controls[i] as CheckBox).Checked || (controls[i] is RadioButton)&&(controls[i] as RadioButton).Checked)
                 {
-                    foreach (Answer answer in mytes.Questions[index].Answers)
-                    {
-                        answer.IsChecked = true;
-                    }
+                    mytes.Questions[index].Answers[i].IsChecked = true;
                 }
             }
         }
