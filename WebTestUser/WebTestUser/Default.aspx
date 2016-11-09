@@ -14,12 +14,14 @@
         <asp:UpdatePanel ID="UpdatePanel" runat="server">
             <ContentTemplate>
                 <mycontrol:TestBodyControl ID="TestBodyControl"  runat="server"/>
-                <asp:HiddenField ID="IndexHiddenField" runat="server" />
+                
                 <asp:Button ID="ButtPrevious" runat="server" Text="<--Previos" OnClick="ButtPrevious_Click" />
                 <asp:Button ID="ButtNext" runat="server" Text="Next-->" OnClick="ButtNext_Click" />
                 <asp:Button ID="ButtCancel" runat="server" Text="Cancel" />
+                <asp:HiddenField ID="IndexHiddenField" Value="" runat="server" />
             </ContentTemplate>
         </asp:UpdatePanel>
+        
     </div>
     </form>
 </body>

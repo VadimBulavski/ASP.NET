@@ -31,12 +31,12 @@ namespace WebTestUser {
         protected global::System.Web.UI.WebControls.Label bodyQuestion;
         
         /// <summary>
-        /// PlaceHolder1 элемент управления.
+        /// PlaceForAnswer элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceForAnswer;
     }
 }

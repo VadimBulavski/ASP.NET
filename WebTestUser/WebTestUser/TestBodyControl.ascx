@@ -13,7 +13,7 @@
     </tr>
     <tr>
         <td>
-            <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+            <asp:PlaceHolder ID="PlaceForAnswer" runat="server"></asp:PlaceHolder>
             <%--<asp:PlaceHolder ID="textAnswer" runat="server" Font-Size="Large" Font-Bold="true"></asp:PlaceHolder>--%>
 
             <%--<div id="textAnswer" runat="server" style="font-size: large; font-weight: bold"></div>--%>

@@ -13,56 +13,31 @@ namespace WebTestUser
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 TestBodyControl.LoadingDataIntoControl(counter);
             }
             else
             {
-                    //ControlCollection collection = Session["control"] as ControlCollection;
-                    TestBodyControl.GetCheckedControl(counter, TestBodyControl.FindControl("PlaceHolder1").Controls);
+                if (IndexHiddenField.Value == string.Empty)
+                {
+                    IndexHiddenField.Value = counter.ToString();
+                }
+                TestBodyControl.GetCheckedControl(Int32.Parse(IndexHiddenField.Value),
+                                                  TestBodyControl.FindControl("PlaceForAnswer").Controls);
             }
-            if (ViewState["count"] == null)
-            {
-                ViewState["count"] = counter.ToString();
-            }
-            //ControlCollection collection = Session["control"] as ControlCollection;
-        //    if(collection != null)
-        //    {
-        //        var obj = ViewState["count"];
-        //        if(obj != null)
-        //        {
-        //            counter = Int32.Parse(obj.ToString());
-        //            TestBodyControl.GetCheckedControl(counter, collection);
-        //        }
-        //        else
-        //            TestBodyControl.GetCheckedControl(counter, collection);
-        //    }
-        //    else
-        //        Session["control"] = TestBodyControl.FindControl("PlaceHolder1").Controls;
+            
          }
 
-         protected void Page_Init(object sender, EventArgs e)
+        protected void Page_Init(object sender, EventArgs e)
         {
-            ControlCollection collection = Session["control"] as ControlCollection;
-            if (collection != null)
+            var obj = Session["control"] as TestBodyControl;
+            if (obj != null)
             {
-                if (IndexHiddenField.Value != null)
-                {
-                    counter = Int32.Parse(ViewState["count"].ToString());
-                }
-                TestBodyControl.LoadingDataIntoControl(counter);
-                TestBodyControl.GetCheckedControl(counter, collection);
-                //var obj = Session["count"];
-                //if (obj != null)
-                //{
-                    
-                //}
-                //else
-                //    TestBodyControl.GetCheckedControl(counter, collection);
+                TestBodyControl.FindControl("PlaceForAnswer").Controls = 
+                    Session["control"] as ControlCollection;
             }
-            else
-                Session["control"] = TestBodyControl.FindControl("PlaceHolder1").Controls;
+            Session["control"] = TestBodyControl.FindControl("PlaceForAnswer").Controls;
         }
 
 
@@ -70,33 +45,22 @@ namespace WebTestUser
         protected void ButtNext_Click(object sender, EventArgs e)
         {
           
-            //TestBodyControl.GetCheckedControl(counter, ;
-            //TestBodyControl.GetCheckedControl(counter, control);
-            //TestBodyControl.GetCheckedControl(counter, control);
-            //Session["control"] = TestBodyControl.FindControl("PlaceHolder1").Controls;
-            //object obj = ViewState["count"];
-            //if (obj != null)
-            //{
-            //    counter = Int32.Parse(ViewState["count"].ToString());
-            //}
+            if (IndexHiddenField.Value != null)
+            {
+                counter = Int32.Parse(IndexHiddenField.Value);
+            }
             counter++;
             IndexHiddenField.Value = counter.ToString();
-
             TestBodyControl.LoadingDataIntoControl(counter);
         }
 
         protected void ButtPrevious_Click(object sender, EventArgs e)
         {
-            //var control = TestBodyControl.FindControl("textAnswer");
-            //TestBodyControl.GetCheckedControl(counter, control);
-            //Session["control"] = TestBodyControl.Controls;
-            //object obj = ViewState["count"];
-            //if (obj != null)
-            //{
-            //    counter = Int32.Parse(ViewState["count"].ToString());
-            //}
+            if (IndexHiddenField.Value != null)
+            {
+                counter = Int32.Parse(IndexHiddenField.Value);
+            }
             counter--;
-            //ViewState["count"] = counter.ToString();
             IndexHiddenField.Value = counter.ToString();
             TestBodyControl.LoadingDataIntoControl(counter);
         }
