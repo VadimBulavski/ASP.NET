@@ -11,5 +11,6 @@ namespace Repository
     {
         New GetNew(int id);
         IEnumerable<New> GetAllNews();
+        IEnumerable<New> GetNameNews(string name);
     }
 }

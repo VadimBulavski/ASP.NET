@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DomainObject.Entitys.New>
+@{
+    Layout = null;
+}
+@foreach (var item in Model)
+{
+    <table class="table">
+        <tr>
+            <td style="font-size:x-large">
+                @Html.DisplayFor(itemModel => item.Header)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(itemModel => item.Body)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @* @Html.ActionLink("Read New", "Read", new { controller = "Admin", area = "Admin" })<br />*@
+                @Html.ActionLink("Update New", "Update", new { controller = "Admin", area = "Admin", id = item.NewsID }) |
+                @Html.ActionLink("Delete New", "Delete", new { controller = "Admin", area = "Admin", id = item.NewsID })
+
+            </td>
+        </tr>
+    </table>
+}       

@@ -11,25 +11,51 @@
     <title>Update</title>
 </head>
 <body>
-    <div> 
+    <div>
         <h1>Update New</h1>
-        @Html.ActionLink("Back", "Index", new { controller = "Admin", area = "Admin" })
-        <dl>
-            <dt>
-                @Html.DisplayNameFor(model=>model.Header):
-            </dt>
-            <dd>
-                @Html.EditorFor(model => model.Header)
-                @Html.ValidationMessageFor(model => model.Header)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => model.Body):
-            </dt>
-            <dd>
-                @Html.EditorFor(model => model.Header)
-                @Html.ValidationMessageFor(model => model.Header)
-            </dd>
-        </dl>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ActionLink("Back", "Index", new { controller = "Admin", area = "Admin" })
+            <dl>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Header):
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Header)
+                    @Html.ValidationMessageFor(model => model.Header)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Body):
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Body)
+                    @Html.ValidationMessageFor(model => model.Body)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Type):
+                </dt>
+                <dd>
+                    @Html.EnumDropDownListFor(model => model.Type)
+                    @Html.ValidationMessageFor(model => model.Type)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Hot):
+                </dt>
+                <dd>
+                    @Html.EditorFor(model => model.Hot)
+                    @Html.ValidationMessageFor(model => model.Hot)
+                </dd>
+            </dl>
+            @Html.HiddenFor(model => model.NewsID)
+            @Html.HiddenFor(model => model.CreateDate)
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Update"  class="btn btn-default" />
+                </div>
+            </div>
+        }
     </div>
 </body>
 </html>

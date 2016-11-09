@@ -28,6 +28,25 @@ namespace WebNews.Areas.Admin.Controllers
             return View(_service.GetAllNews());
         }
 
+        [HttpPost]
+        public ActionResult FindNews(string nameNews)
+        {
+            //Func<New, bool> selector = nextNew => true;
+            //if (!string.IsNullOrWhiteSpace(newsName))
+            //{
+            //    selector = (x) => x.Header.ToUpper() == newsName.ToUpper();
+            //}
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("SearchNewsView", _service.GetNameNews(nameNews));
+            }
+            else
+            {
+                return View("Index", _service.GetAllNews());
+            }
+
+        }
+
         public ActionResult Read(int? id)
         {
             if (id == null)
@@ -84,11 +103,16 @@ namespace WebNews.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Update([Bind(Include = "NewsID, Header, Body, Hot, Type")] New nextNew)
+        public ActionResult Update(New nextNew)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(nextNew).State = EntityState.Modified;
+                var newNew = db.News.Where(s => s.NewsID == nextNew.NewsID).FirstOrDefault();
+                newNew.Header = nextNew.Header;
+                newNew.Body = nextNew.Body;
+                newNew.Type = nextNew.Type;
+                newNew.Hot = nextNew.Hot;
+                newNew.Comments = nextNew.Comments;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -107,7 +131,7 @@ namespace WebNews.Areas.Admin.Controllers
             {
                 return HttpNotFound();
             }
-            return View(nextNew);
+            return DeleteConfirmed(nextNew.NewsID);
             //return DeleteConfirmed((int)id);
         }
 

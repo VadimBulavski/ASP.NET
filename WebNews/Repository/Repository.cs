@@ -19,7 +19,14 @@ namespace Repository
         public IEnumerable<DomainObject.Entitys.New> GetAllNews()
         {
             NewsDataContext db = new NewsDataContext();
-            return db.News.Select(p => p).ToList();
+            return db.News.Select(s => s).ToList();
+        }
+
+
+        public IEnumerable<New> GetNameNews(string name)
+        {
+            NewsDataContext db = new NewsDataContext();
+            return db.News.Where(s=>s.Header == name).ToList();
         }
     }
 }

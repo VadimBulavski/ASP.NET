@@ -12,35 +12,30 @@
     <title>Admin</title>
 </head>
 <body>
-    <div> 
+    <div>
         <h1>Admin News</h1>
-        @Html.ActionLink("Create New", "Create", new { controller = "Admin", area = "Admin" })
+        @Html.ActionLink("Create New", "Create", new { controller = "Admin", area = "Admin" })|
         @Html.ActionLink("Go to News", "Index", new { controller = "News", area = "News" })
-        @foreach(var item in Model)
-        {
-            <table class="table">
-                <tr>
-                    <td style="font-size:x-large">
-                        @Html.DisplayFor(itemModel => item.Header)
-                    </td>
-                    <td>
 
-                        @* @Html.ActionLink("Read New", "Read", new { controller = "Admin", area = "Admin" })<br />*@
-                        @Html.ActionLink("Update New", "Read", new { controller = "Admin", area = "Admin", id = item.NewsID }) |
-                        @Html.ActionLink("Delete New", "Delete", new { controller = "Admin", area = "Admin", id = item.NewsID })
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.DisplayFor(itemModel => item.Body)
-                    </td>
-                    
-                </tr>
-            </table>
+
+        @using (Ajax.BeginForm("FindNews", new AjaxOptions
+        {
+          InsertionMode = InsertionMode.Replace,
+          UpdateTargetId = "update",
+          LoadingElementId = "loader"
+        }))
+        {
+            @Html.TextBox("nameNews")
+            <input type="submit" value="Search" />
         }
 
-        
+        @* ... *@
+        <div id="loader" class=" aletr" style="display:none">
+            Loading...
+        </div>
+        <div id="update">
+            @Html.Partial("SearchNewsView", Model)
+        </div>
     </div>
 </body>
 </html>
