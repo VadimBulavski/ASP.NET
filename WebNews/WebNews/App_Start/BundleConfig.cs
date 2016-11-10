@@ -28,6 +28,9 @@ namespace WebNews
                       "~/Content/site.css"));
             bundles.Add(new StyleBundle("~/bundles/ajax").Include(
                      "~/Scripts/jquery.unobtrusive-ajax.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
+                        "~/Scripts/jquery-ui-{version}.js"));
         }
     }
 }

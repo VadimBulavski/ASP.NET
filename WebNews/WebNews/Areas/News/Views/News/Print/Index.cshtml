@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<DomainObject.Entitys.New>
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
 <!DOCTYPE html>
@@ -8,12 +8,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>News</title>
+    <title>Index</title>
 </head>
 <body>
+    <h1>Print Version</h1>
     <div> 
-        <h1>News</h1>
-        <p>@Html.ActionLink("Admin", "Index", new { controller = "Admin", area = "Admin"})</p>
         @foreach (var item in Model)
         {
             <table class="table">
@@ -28,11 +27,6 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(itemModel => item.Body)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.ActionLink("Print version", "Index", new {id="print" }) 
                     </td>
                 </tr>
             </table>
