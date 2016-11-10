@@ -13,6 +13,21 @@
 <body>
     <h1>Print Version</h1>
     <div> 
+        @*<table class="table">
+            <tr>
+                <td style="font-size:x-large">
+                    @Html.DisplayFor(model => model.Header)
+                </td>
+                <td style="float:right">
+                    @Html.DisplayFor(model => model.CreateDate)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Body)
+                </td>
+            </tr>
+        </table>*@
         @foreach (var item in Model)
         {
             <table class="table">

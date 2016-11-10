@@ -32,9 +32,11 @@ namespace WebNews.Areas.Admin.Controllers
         public ActionResult FindNews(string nameNews)
         {
             //Func<New, bool> selector = nextNew => true;
-            //if (!string.IsNullOrWhiteSpace(newsName))
+            //if (!string.IsNullOrWhiteSpace(nameNews))
             //{
-            //    selector = (x) => x.Header.ToUpper() == newsName.ToUpper();
+            //    //selector = (x) => x.Header.ToUpper() == newsName.ToUpper();
+               
+
             //}
             if (Request.IsAjaxRequest())
             {
@@ -44,7 +46,7 @@ namespace WebNews.Areas.Admin.Controllers
             {
                 return View("Index", _service.GetAllNews());
             }
-
+          
         }
 
         public ActionResult Read(int? id)

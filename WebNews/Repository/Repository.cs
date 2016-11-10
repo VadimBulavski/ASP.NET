@@ -26,7 +26,7 @@ namespace Repository
         public IEnumerable<New> GetNameNews(string name)
         {
             NewsDataContext db = new NewsDataContext();
-            return db.News.Where(s=>s.Header == name).ToList();
+            return db.News.Where(s=>s.Header.Contains(name)).ToList();
         }
     }
 }
